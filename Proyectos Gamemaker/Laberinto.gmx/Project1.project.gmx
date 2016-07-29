@@ -35,10 +35,14 @@
       <sprite>sprites\sprPuertaNegra</sprite>
       <sprite>sprites\sprPuertaDorada</sprite>
     </sprites>
+    <sprite>sprites\sprDinamita</sprite>
+    <sprite>sprites\sprRoca</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\background1</background>
+    <background>background\background2</background>
+    <background>background\background3</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -58,14 +62,24 @@
       <object>objects\objLlaveDorada</object>
       <object>objects\objPuertaPadre</object>
     </objects>
-    <object>objects\objInicio</object>
-    <object>objects\objMusicaFondo</object>
+    <objects name="sin sprite">
+      <object>objects\objInicio</object>
+      <object>objects\Reinicio_Bueno</object>
+      <object>objects\Game_Over</object>
+      <object>objects\objMusicaFondo</object>
+    </objects>
+    <object>objects\objRoca</object>
+    <object>objects\objDinamita</object>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\Inicio</room>
+    <room>rooms\Nivel_Puerta_Maguca</room>
     <room>rooms\Nivel1</room>
     <room>rooms\Nivel2</room>
     <room>rooms\Nivel3</room>
+    <room>rooms\Fin_del_Juego</room>
+    <room>rooms\Perdiste</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

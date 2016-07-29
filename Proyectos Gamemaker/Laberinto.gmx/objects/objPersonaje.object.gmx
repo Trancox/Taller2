@@ -30,6 +30,7 @@ velocidad = 5 ;
 
 LlaveDorada = false;
 LlaveNegra = false;
+
 </string>
           </argument>
         </arguments>
@@ -143,6 +144,7 @@ if (place_meeting(x,y,objLlaveDorada))
     LlaveDorada = true;
     audio_play_sound(sndLlaves,10,false);
     }
+
 </string>
           </argument>
         </arguments>
@@ -190,6 +192,17 @@ if (LlaveDorada)
         }
         } 
         }
+
+if(instance_number(objDinamita) == 0)
+    {
+    if(place_meeting(x,y+velocidad,objRoca)) ||
+    (place_meeting(x,y-velocidad,objRoca)) ||
+    (place_meeting(x+velocidad,y,objRoca)) ||
+    (place_meeting(x+velocidad,y,objRoca))
+        { 
+        with (objRoca){instance_destroy();}
+        }
+}
 </string>
           </argument>
         </arguments>
@@ -214,7 +227,7 @@ if (LlaveDorada)
             <kind>1</kind>
             <string>instance_destroy ();
 audio_play_sound(sndMuerte,10,false)
-room_restart();
+room_goto(Perdiste);
 
 </string>
           </argument>
