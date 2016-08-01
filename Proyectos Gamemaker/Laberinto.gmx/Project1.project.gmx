@@ -35,8 +35,8 @@
       <sprite>sprites\sprPuertaNegra</sprite>
       <sprite>sprites\sprPuertaDorada</sprite>
     </sprites>
-    <sprite>sprites\sprDinamita</sprite>
     <sprite>sprites\sprRoca</sprite>
+    <sprite>sprites\sprDinamita</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -71,7 +71,6 @@
     <object>objects\objRoca</object>
     <object>objects\objDinamita</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\Inicio</room>
     <room>rooms\Nivel_Puerta_Maguca</room>
