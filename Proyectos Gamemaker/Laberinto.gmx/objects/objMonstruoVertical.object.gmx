@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>vspeed = 6;
+            <string>vspeed = 3
 </string>
           </argument>
         </arguments>
@@ -48,8 +48,29 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (! place_empty(x,y)) {vspeed = -vspeed}
+            <string>if place_meeting(x,y,objParedes)  { vspeed = - vspeed; exit;}
 
+
+
+/*
+speed = 6;
+ 
+ if (x == objPersonaje.x)
+    { 
+       if (direction == 90 &amp;&amp; y &gt; objPersonaje.y)
+        {
+        speed= 20;
+        }
+        
+        else 
+        if (direction ==270 &amp;&amp; y &lt; objPersonaje.y)
+        {
+        speed = 20;
+        }
+        else
+        speed= 3
+       }
+        
 </string>
           </argument>
         </arguments>

@@ -242,6 +242,8 @@
     <instance objName="objPuertaNegra" x="224" y="416" name="inst_68AEDE12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPersonaje" x="32" y="32" name="inst_8A72BA63" locked="0" code="" scaleX="0.800000011920929" scaleY="0.800000011920929" colour="4294967295" rotation="0"/>
     <instance objName="objRecolectables" x="576" y="416" name="inst_4C216A4B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPuertaNegra" x="32" y="96" name="inst_0F50649E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLlaveNegra" x="32" y="64" name="inst_0B59EDCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -227,7 +227,16 @@ if(instance_number(objDinamita) == 0)
             <kind>1</kind>
             <string>instance_destroy ();
 audio_play_sound(sndMuerte,10,false)
-room_goto(Perdiste);
+
+lives -= 1
+
+if (lives &lt;= 0)
+ {
+room_goto (Perdiste)
+ }
+else room_restart(); 
+
+
 
 </string>
           </argument>
