@@ -10,17 +10,51 @@
     <sprite>sprites\spr_blocks</sprite>
     <sprite>sprites\sprite3</sprite>
     <sprite>sprites\spr_monster</sprite>
+    <sprite>sprites\sprite4</sprite>
+    <sprite>sprites\spr_monster2</sprite>
+    <sprite>sprites\spr_meta</sprite>
+    <sprite>sprites\spr_volador</sprite>
+    <sprite>sprites\spr_volador1</sprite>
+    <sprite>sprites\spr_checkpoint</sprite>
+    <sprite>sprites\spr_plataforma</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_muerte.gml</script>
+  </scripts>
   <objects name="objects">
-    <object>objects\obj_player</object>
-    <object>objects\obj_block</object>
-    <object>objects\obj_powerup</object>
-    <object>objects\obj_monster</object>
+    <objects name="monsters">
+      <object>objects\obj_volador</object>
+      <object>objects\obj_spawn</object>
+      <object>objects\obj_monster</object>
+      <object>objects\obj_monster_nofall</object>
+    </objects>
+    <objects name="powerup">
+      <object>objects\obj_powerup_move</object>
+      <object>objects\obj_powerup_salto</object>
+    </objects>
+    <objects name="no sprite">
+      <object>objects\obj_puntaje_vidas</object>
+      <object>objects\obj_regresar_inicio</object>
+      <object>objects\obj_next_room</object>
+    </objects>
+    <objects name="player,walls and meta">
+      <object>objects\obj_player</object>
+      <object>objects\obj_meta</object>
+      <object>objects\obj_block</object>
+      <object>objects\obj_plataforma</object>
+    </objects>
+    <object>objects\obj_checkpoint</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_inicial</room>
+    <room>rooms\room1</room>
     <room>rooms\prueba</room>
+    <room>rooms\prueba_2</room>
+    <room>rooms\prueba3</room>
+    <room>rooms\ganaste</room>
+    <room>rooms\perdiste</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
