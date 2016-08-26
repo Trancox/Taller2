@@ -68,9 +68,15 @@ x += hsp;
 if ( place_meeting (x,y,obj_player) )
 {
 
-    lives -= 1; 
+    global.lifes -= 1; 
     instance_destroy();
+    scr_muerte()
     
+}
+
+if ( place_meeting (x,y,obj_player) )&amp;&amp; (global.lifes &lt;= 0)
+{
+ game_restart()
 }
 </string>
           </argument>

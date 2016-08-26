@@ -32,13 +32,45 @@ movespeed_normal = 4;
 movespeed_powerup = 7;
 jumpspeed_normal = 7;
 jumpspeed_powerup = 14;
+disparar = 0;
+dir = 0;
+
+key_down = 0;
 
 jumpspeed = jumpspeed_normal
 
 movespeed = movespeed_normal
 
-lives = 3;
-score = 0;
+if(global.checkpointR = room)
+{
+    x = global.checkpointx
+    y = global.checkpointy
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>disparar = 1
+
 </string>
           </argument>
         </arguments>
@@ -109,11 +141,23 @@ score = 0;
             <kind>1</kind>
             <string>/// Control personaje
 
+// Disparar
+
+if (disparar) {
+disparar = 0
+        balas = instance_create(x,y,obj_bullet)
+        balas.speed = 6;
+        alarm[2] = 15;
+        if (dir == 1) {balas.direction = 0;}
+         if (dir == -1) {balas.direction = 180;}
+         }
+
 // Entradas teclado
 
 key_right = keyboard_check(vk_right);
 key_left = keyboard_check(vk_left);
 key_space = keyboard_check_pressed(vk_space);
+key_down = keyboard_check(vk_down);
 
 // Movimiento y operaciones de entradas
 
@@ -134,7 +178,7 @@ x += hsp;
 if ( vsp &lt; 10) {vsp += grav}
 if (place_meeting(x,y+1,obj_block))
     {
-    vsp = key_space * - jumpspeed;
+    if (key_space)vsp = - jumpspeed;
     }
     
 // colision vertical
@@ -149,13 +193,12 @@ if(place_meeting(x,y+vsp,obj_block))
 y += vsp;
 
 
-//vidas
-
-if (lives = 0){room_goto(perdiste)};
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="4" ename="obj_banana">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -172,7 +215,53 @@ if (lives = 0){room_goto(perdiste)};
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (lives &lt;= 0){ room_goto (perdiste)} 
+            <string>disparar = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="39">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>dir = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="37">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>dir = -1;
 </string>
           </argument>
         </arguments>
